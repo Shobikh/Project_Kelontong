@@ -263,18 +263,18 @@ public class input_karyawan extends javax.swing.JFrame {
             int rowsAffected = stmt.executeUpdate();
 
             if (rowsAffected > 0) {
-                JOptionPane.showMessageDialog(this, "Data barang berhasil ditambahkan ke database.");
+                JOptionPane.showMessageDialog(this, "Data Karyawan berhasil ditambahkan ke database.");
                 // Mengosongkan field setelah data berhasil ditambahkan
                 clearFields();
                 tabelKaryawan();
             } else {
-                JOptionPane.showMessageDialog(this, "Gagal menambahkan data barang ke database.");
+                JOptionPane.showMessageDialog(this, "Gagal menambahkan data Karyawan ke database.");
             }
 
             
             
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Masukkan stok dan harga dengan benar!");
+            JOptionPane.showMessageDialog(this, "Masukkan dengan benar!");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Terjadi kesalahan database: " + e.getMessage());
         }
@@ -303,12 +303,12 @@ public class input_karyawan extends javax.swing.JFrame {
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel) tabelKaryawan.getModel();
+        //DefaultTableModel model = (DefaultTableModel) tabelKaryawan.getModel();
         int row = tabelKaryawan.getSelectedRow();
         if (row >= 0) {
             // Mendapatkan ID atau kunci unik (misalnya kolom ID_Barang) dari tabel yang akan dihapus
             String id = tabelKaryawan.getValueAt(row, 0).toString();
-            model.removeRow(row);
+            //model.removeRow(row);
             try {
 
                 sql = "DELETE FROM karyawan WHERE id = ?";

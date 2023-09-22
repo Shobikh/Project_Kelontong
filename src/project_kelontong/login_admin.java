@@ -156,7 +156,7 @@ public class login_admin extends javax.swing.JFrame {
         adminpoenya.setVisible(true);
         dispose();
         } else {
-            JOptionPane.showMessageDialog(null, "Teliti Lagi SATTT!!");
+            JOptionPane.showMessageDialog(null, "Wlee :P!!");
         }
         
         // Jangan lupa menutup ResultSet
